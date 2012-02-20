@@ -1,0 +1,35 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass{curve}
+\usepackage{hyperref}
+
+\leftheader{}
+\rightheader{}
+\newlength{\EmpHistoryBlock}
+\setlength{\EmpHistoryBlock}{9cm}
+\newlength{\TimeKeyWidth}
+\setlength{\TimeKeyWidth}{3.5cm}
+
+\renewcommand{\arraystretch}{1.2}
+
+\newcommand{\timekey}[2]{\multicolumn{1}{@{}>{\mykeyfont}p{\TimeKeyWidth}}{#1~---\newline #2}}
+\newcommand{\longkey}[2]{\multicolumn{1}{@{}>{\mykeyfont}p{\TimeKeyWidth}}{#1\newline #2}}
+
+\title{Roman Kashitsyn}
+\subtitle{Software Engineer}
+
+\begin{document}
+\prefix{}
+\keyfont{\bfseries}
+\makeatletter\let\mykeyfont\@keyfont\makeatother
+
+\makeheaders[t]
+\maketitle
+
+\nocite{*}
+
+\makerubric{personal-information}
+\makerubric{summary-of-experience}
+\makerubric{employment-history}
+\makerubric{education}
+\makerubric{interests}
+\end{document}
