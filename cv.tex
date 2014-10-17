@@ -1,35 +1,161 @@
-\NeedsTeXFormat{LaTeX2e}
-\documentclass{curve}
-\usepackage{hyperref}
+\documentclass[11pt,a4paper,sans]{moderncv} 
+\moderncvstyle{casual}
+\moderncvcolor{blue}
 
-\leftheader{}
-\rightheader{}
-\newlength{\EmpHistoryBlock}
-\setlength{\EmpHistoryBlock}{9cm}
-\newlength{\TimeKeyWidth}
-\setlength{\TimeKeyWidth}{3.5cm}
+\usepackage[scale=0.75]{geometry}
+%------------------------------------------------------------
+% Personal info
+%------------------------------------------------------------
+\firstname{Roman}
+\familyname{Kashitsyn}
 
-\renewcommand{\arraystretch}{1.2}
+\title{Software Engineer}
+\mobile{+7 910 396 3809}
+\email{roman.kashitsyn@gmail.com}
 
-\newcommand{\timekey}[2]{\multicolumn{1}{@{}>{\mykeyfont}p{\TimeKeyWidth}}{#1~---\newline #2}}
-\newcommand{\longkey}[2]{\multicolumn{1}{@{}>{\mykeyfont}p{\TimeKeyWidth}}{#1\newline #2}}
-
-\title{Roman Kashitsyn}
-\subtitle{Software Engineer}
-
+%------------------------------------------------------------
+% Document
+%------------------------------------------------------------
 \begin{document}
-\prefix{}
-\keyfont{\bfseries}
-\makeatletter\let\mykeyfont\@keyfont\makeatother
+\makecvtitle
 
-\makeheaders[t]
-\maketitle
+%------------------------------------------------------------
+% Skills
+%------------------------------------------------------------
+\section{Skills}
+\cvitem{Languages}{C++, C, Java, Go, Python, Haskell, JavaScript}
+\cvitem{Build Tools}{GNU make, CMake, Ant, Maven, Gradle}
+\cvitem{OS}{GNU/Linux, Windows}
+\cvitem{VCS}{git, svn}
+\cvitem{Databases}{MongoDb, ZooKeeper, Postgresql, Redis, Oracle}
+\cvitem{Other}{Multithreading, Concurrency, Algorithm Design,
+API Design}
 
-\nocite{*}
+%------------------------------------------------------------
+% Experience
+%------------------------------------------------------------
+\section{Experience}
+\cventry{2013--Present}
+{Software Engineer}
+{Yandex}
+{Nizhny Novgorod}
+{}
+{I'm working on a system that maintains actualized catalog of
+companies.  It's internal service used by maps, search engine, online
+hotel booking, etc.  Keeping this data up to date is really important
+for millions of users.
+\newline{}
+Achievements:
+\begin{itemize}
+\item Designed and implemented C++ zookeeper client library on top of
+  libzookeeper.
+\item Implemented a distributed service for asynchronous task
+  processing in C++ using ZooKeeper and MongoDb.
+\item Redesigned and rewrote existing build and packaging system. It
+  simplified development and deployment cycle significantly.
+\item Adopted Flyway library to manage database migrations.
+\end{itemize}
+}
 
-\makerubric{personal-information}
-\makerubric{summary-of-experience}
-\makerubric{employment-history}
-\makerubric{education}
-\makerubric{interests}
+\cventry{2012--2013}
+{Lead Software Engineer}
+{MFI Soft}
+{Nizhny Novgorod}
+{}
+{I worked on a prototype of a system that captures and analyzes HTTP
+traffic running through a high-speed network interface.
+\newline{}
+Achievements:
+\begin{itemize}
+\item Designed and implemented a C++-library to store lots of small
+  messages in large continuous chunks. The resulting library
+  outperformed all the general-purpose storage systems we've tested
+  for our use case.
+\item Designed and implemented a C++-library to monitor application
+  statistics via HTTP-interface.
+\item Practiced code review, refactoring, unit-testing and taught
+  other engineers to use best practices.
+\item Did a lot of benchmarking and optimization.
+\end{itemize}
+}
+
+\cventry{2011--2012}
+{Software Engineer, Architect}
+{Exigen Services}
+{Nizhny Novgorod}
+{}
+{I worked on a project for
+\href{http://www.aaa.com/PPInternational/International.html}{AAA}
+based on
+\href{http://www.exigeninsurance.com/business-solutions/overview.html}{Exigen Insurance Solutions}.
+The project was successfully deployed and transferred to support team.
+\newline{}
+Achievements:
+\begin{itemize}
+\item Led free Java and JavaScript courses for employees and external
+  visitors.
+\item Got ''Best Newcomer of the Year (2011)'' award.
+\end{itemize}
+}
+
+\cventry{2009--2010}
+{Software Engineer}
+{IT Corp.}
+{Nizhny Novgorod}
+{}
+{I worked on several projects for banks and public institutions, did
+various investigations and prototypes.
+}
+
+\cventry{2009--2010}
+{Software Developer}
+{Mera NN}
+{Nizhny Novgorod}
+{}
+{I worked in support team and did bugfixes and improvements in two
+projects:
+\begin{itemize}
+\item Adaptation of SS7 stack for Ericsson CPP platform (September
+  2009--November 2010).  The system is mostly written and ANSI C and
+  running on OSE Delta real-time OS.
+\item Element Manager for Nortel ICP product (March 2009--September
+  2009).  The product is based on Java 5 and J2EE and runs on JBoss
+  4.2.
+\end{itemize}
+}
+
+%------------------------------------------------------------
+% Education
+%------------------------------------------------------------
+\section{Education}
+\cventry{2004--2010}
+{Specialist}
+{N.I. Lobachevsky State University}
+{Nizhny Novgorog}
+{}
+{Faculty of Computational Mathematics and Cybernetics.}
+
+%------------------------------------------------------------
+% Languages
+%------------------------------------------------------------
+\section{Languages}
+\cvlanguage{English}{Intermediate}{}
+\cvlanguage{Russian}{Native}{}
+
+%------------------------------------------------------------
+% Profiles
+%------------------------------------------------------------
+\section{Profiles}
+\cvitemwithcomment{GitHub}{\url{https://github.com/roman-kashitsyn}}{}
+\cvitemwithcomment{Shelfari}{\url{http://www.shelfari.com/lifted}}{}
+\cvitemwithcomment{LinkedIn}{\url{https://www.linkedin.com/profile/view?id=193829212}}{}
+
+%------------------------------------------------------------
+% Interests
+%------------------------------------------------------------
+\section{Interests}
+\cvlistdoubleitem{Software Architecture}{API Design}
+\cvlistdoubleitem{Functional Programming}{Physics}
+\cvlistdoubleitem{Build Systems}{Math}
+
 \end{document}
