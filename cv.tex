@@ -13,6 +13,8 @@
 \mobile{+7 910 396 3809}
 \email{roman.kashitsyn@gmail.com}
 
+\newcommand{\Cpp}{C{}\texttt{++}}
+
 %------------------------------------------------------------
 % Document
 %------------------------------------------------------------
@@ -23,12 +25,12 @@
 % Skills
 %------------------------------------------------------------
 \section{Programming Skills}
-\cvitem{Proficient}{C++, C, Java}
-\cvitem{Familiar}{Python, Go, Haskell, JavaScript}
+\cvitem{Proficient}{\Cpp{}, C, Java}
+\cvitem{Familiar}{Python, Go, Scala, Haskell, JavaScript}
 \cvitem{Build Tools}{GNU make, CMake, Ant, Maven, Gradle}
 \cvitem{OS}{GNU/Linux, Windows}
 \cvitem{VCS}{git, svn}
-\cvitem{Databases}{MongoDb, ZooKeeper, Postgresql, Redis, Oracle}
+\cvitem{Databases}{MongoDb, ZooKeeper, Redis, Postgresql, Oracle}
 \cvitem{Other}{Multithreading, Concurrency, Algorithm Design,
 API Design}
 
@@ -41,19 +43,22 @@ API Design}
 {Yandex}
 {Nizhny Novgorod}
 {}
-{I'm working on a system that maintains actualized catalog of
+{I worked on a system that maintains actualized catalog of
 companies.  It's internal service used by maps, search engine, online
 hotel booking, etc.  Keeping this data up to date is really important
 for millions of users.
 \newline{}
 Achievements:
 \begin{itemize}
-\item Designed and implemented C++ zookeeper client library on top of
-  libzookeeper.
+\item Designed and implemented \Cpp{} zookeeper client library leveraging
+  \Cpp{}11 features on top of libzookeeper.
+\item Designed and implemented \Cpp{} library to read/write CSV streams
+  which is now heavily used in data exchange code.
 \item Implemented a distributed service for asynchronous task
-  processing in C++ using ZooKeeper and MongoDb.
-\item Redesigned and rewrote existing build and packaging system. It
-  simplified development and deployment cycle significantly.
+  processing in \Cpp{} using ZooKeeper and MongoDb.
+\item Redesigned and rewrote existing build and packaging system using
+  Gradle build tool. It simplified development and deployment cycle
+  significantly.
 \item Adopted Flyway library to manage database migrations.
 \end{itemize}
 }
@@ -68,11 +73,11 @@ traffic running through a high-speed network interface.
 \newline{}
 Achievements:
 \begin{itemize}
-\item Designed and implemented a C++-library to store lots of small
+\item Designed and implemented a \Cpp{} library to store lots of small
   messages in large continuous chunks. The resulting library
   outperformed all the general-purpose storage systems we've tested
   for our use case.
-\item Designed and implemented a C++-library to monitor application
+\item Designed and implemented a \Cpp{} library to monitor application
   statistics via HTTP-interface.
 \item Practiced code review, refactoring, unit-testing and taught
   other engineers to use best practices.
@@ -95,6 +100,8 @@ Achievements:
 \begin{itemize}
 \item Led free Java and JavaScript courses for employees and external
   visitors.
+\item Wrote a Maven2 plugin that significantly simplified work for
+  translators.
 \item Got ''Best Newcomer of the Year (2011)'' award.
 \end{itemize}
 }
