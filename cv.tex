@@ -26,11 +26,11 @@
 %------------------------------------------------------------
 \section{Programming Skills}
 \cvitem{Proficient}{\Cpp{}, C, Java}
-\cvitem{Familiar}{Python, Go, Scala, Haskell, JavaScript}
+\cvitem{Familiar}{Python, Go, Haskell, JavaScript, Scala}
 \cvitem{Build Tools}{GNU make, CMake, Ant, Maven, Gradle}
 \cvitem{OS}{GNU/Linux, Windows}
 \cvitem{VCS}{git, svn}
-\cvitem{Databases}{MongoDb, ZooKeeper, Redis, Postgresql, Oracle}
+\cvitem{Databases}{MongoDb, ZooKeeper, Redis, Oracle, Postgresql}
 \cvitem{Other}{Multithreading, Concurrency, Algorithm Design,
 API Design}
 
@@ -40,32 +40,43 @@ API Design}
 \section{Experience}
 \cventry{2013--Present}
 {Software Engineer}
-{Yandex}
+{Yandex -- Geodata Storage Team}
 {Nizhny Novgorod}
 {}
-{I worked on a system that maintains an actualized catalog of
-  companies.  It's an internal service that is used by maps, search
-  engine, online hotel booking, etc.  Keeping this data up to date is
-  really important for millions of users.
-\newline{}
+{ I worked on a system that maintains a catalog of companies (names,
+  addresses, phones, etc.).  It's an internal service that is used by
+  maps, search engine, online hotel booking, etc.  Keeping this data
+  up to date is really important for millions of users.
+  \newline{} I also worked on integration of the distributed task
+  scheduling infrastructure developed in scope of the company catalog
+  project into our internal maps editor application.
+  \newline{} Now I'm working on tools that match related objects
+  from different databases in order to improve our data integrity and,
+  as result, our users' experience.
+  \newline{}
 Achievements:
 \begin{itemize}
+\item Designed and implemented a distributed service for asynchronous
+  task processing in \Cpp{} using ZooKeeper and MongoDb. The service
+  is designed to survive DC losses. It includes the scheduler process,
+  cron-like process, worker API library, and RESTful
+  HTTP--interface. The service has several internal users and reached
+  production.
 \item Designed and implemented \Cpp{} zookeeper client library leveraging
   \Cpp{}11 features on top of libzookeeper.
-\item Designed and implemented \Cpp{} library to read/write CSV streams
-  which is now heavily used in data exchange code.
-\item Implemented a distributed service for asynchronous task
-  processing in \Cpp{} using ZooKeeper and MongoDb.
+\item Designed and implemented \Cpp{} library to read/write CSV
+  streams which is now heavily used in data exchange code. Initial
+  draft of the implementation is available
+  \href{https://github.com/roman-kashitsyn/text-csv}{on GitHub}.
 \item Redesigned and rewrote existing build and packaging system using
-  Gradle build tool. It simplified the development and deployment
+  the Gradle build tool. It simplified the development and deployment
   cycle significantly.
-\item Adopted Flyway library to manage database migrations.
 \end{itemize}
 }
 
 \cventry{2012--2013}
 {Lead Software Engineer}
-{MFI Soft}
+{MFI Soft -- R\&D team}
 {Nizhny Novgorod}
 {}
 {I worked on a prototype of a system that captures and analyzes HTTP
@@ -74,11 +85,11 @@ traffic running through a high-speed network interface.
 Achievements:
 \begin{itemize}
 \item Designed and implemented a \Cpp{} library to store lots of small
-  messages in large continuous chunks. The resulting library
-  outperformed all the general-purpose storage systems we've tested
-  for our use case.
+  messages in large continuous memory-mapped chunks. The resulting
+  library outperformed all the general-purpose storage systems we had
+  tested for our use case.
 \item Designed and implemented a \Cpp{} library to monitor the
-  application statistics via HTTP-interface.
+  application statistics via a simple HTTP-interface.
 \item Practiced code review, refactoring, unit-testing, and taught
   other engineers to use the best practices.
 \item Made a lot of benchmarking, debugging, and optimization.
