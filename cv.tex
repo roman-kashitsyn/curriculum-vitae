@@ -10,8 +10,9 @@
 \familyname{Kashitsyn}
 
 \title{Software Engineer}
-\mobile{+7 910 396 3809}
+\mobile{+41 78 667 38 49}
 \email{roman.kashitsyn@gmail.com}
+\homepage{mmapped.blog}
 
 \newcommand{\Cpp}{C{}\texttt{++}}
 
@@ -25,53 +26,50 @@
 % Skills
 %------------------------------------------------------------
 \section{Programming Skills}
-\cvitem{Proficient}{\Cpp{}, C, Java}
-\cvitem{Familiar}{Python, Go, Haskell, JavaScript, Scala}
-\cvitem{Build Tools}{GNU make, CMake, Ant, Maven, Gradle}
-\cvitem{OS}{GNU/Linux, Windows}
-\cvitem{VCS}{git, svn}
-\cvitem{Databases}{MongoDb, ZooKeeper, Redis, Oracle, Postgresql}
-\cvitem{Other}{Multithreading, Concurrency, Algorithm Design,
-API Design}
+\cvitem{Proficient}{Rust, \Cpp{}, C}
+\cvitem{Familiar}{Go, Java, Haskell, OCaml, D, Python, JavaScript}
+\cvitem{Areas of expertise}{Algorithm Design, API Design, Distributed systems, Storage systems, Multithreading, Concurrency}
 
 %------------------------------------------------------------
 % Experience
 %------------------------------------------------------------
 \section{Experience}
-\cventry{2013--Present}
+
+\cventry{2019--Now}
+{Staff Software Engineer}
+{DFINITY}
+{Z\"{u}rich}
+{}
+{
+  I view \href{https://dfinity.org/}{\textsc{DFINITY}} as a distributed operating system that hosts WebAssembly programs.
+  My most notable contributions are:
+  \begin{itemize}
+      \item Designed an orthogonal persistence system that preserves versioned snapshots of program states.
+      \item Designed and implemented an efficient checkpointing system that captures the states of a computation shard.
+      \item Designed and implemented state certification layer based on Merkle trees.
+          Implemented a library for incremental hash tree computation (\href{https://crates.io/crates/ic-certified-map/}{ic-certified-map}).
+      \item I contribute to the company's Rust guidelines and provide a lot of technical advice.
+  \end{itemize}
+}
+
+\cventry{2016--2019}
+{Software Engineer}
+{Google -- Storage Data Quality Team}
+{Z\"{u}rich}
+{}
+{
+    I worked on a system that keeps offers on \href{https://shopping.google.com/}{Google.Shopping} fresh and correct.
+  My most notable contribution was building a pipeline that streams data for human evaluation and stores the results.
+}
+
+\cventry{2013--2016}
 {Software Engineer}
 {Yandex -- Geodata Storage Team}
 {Nizhny Novgorod}
 {}
-{ I worked on a system that maintains a catalog of companies (names,
-  addresses, phones, etc.).  It's an internal service that is used by
-  maps, search engine, online hotel booking, etc.  Keeping this data
-  up to date is really important for millions of users.
-  \newline{} I also worked on integration of the distributed task
-  scheduling infrastructure developed in scope of the company catalog
-  project into our internal maps editor application.
-  \newline{} Now I'm working on tools that match related objects
-  from different databases in order to improve our data integrity and,
-  as result, our users' experience.
-  \newline{}
-Achievements:
-\begin{itemize}
-\item Designed and implemented a distributed service for asynchronous
-  task processing in \Cpp{} using ZooKeeper and MongoDb. The service
-  is designed to survive DC losses. It includes the scheduler process,
-  cron-like process, worker API library, and RESTful
-  HTTP--interface. The service has several internal users and reached
-  production.
-\item Designed and implemented \Cpp{} zookeeper client library leveraging
-  \Cpp{}11 features on top of libzookeeper.
-\item Designed and implemented \Cpp{} library to read/write CSV
-  streams which is now heavily used in data exchange code. Initial
-  draft of the implementation is available
-  \href{https://github.com/roman-kashitsyn/text-csv}{on GitHub}.
-\item Redesigned and rewrote existing build and packaging system using
-  the Gradle build tool. It simplified the development and deployment
-  cycle significantly.
-\end{itemize}
+{
+  I worked on a system that maintains a catalog of companies in a few countries.
+  My most notable contribution was designing and implementing a fault-tolerant distributed task scheduling system using ZooKeeper and MongoDB.
 }
 
 \cventry{2012--2013}
@@ -79,42 +77,19 @@ Achievements:
 {MFI Soft -- R\&D team}
 {Nizhny Novgorod}
 {}
-{I worked on a prototype of a system that captures and analyzes HTTP
-traffic running through a high-speed network interface.
-\newline{}
-Achievements:
-\begin{itemize}
-\item Designed and implemented a \Cpp{} library to store lots of small
-  messages in large continuous memory-mapped chunks. The resulting
-  library outperformed all the general-purpose storage systems we had
-  tested for our use case.
-\item Designed and implemented a \Cpp{} library to monitor the
-  application statistics via a simple HTTP-interface.
-\item Practiced code review, refactoring, unit-testing, and taught
-  other engineers to use the best practices.
-\item Made a lot of benchmarking, debugging, and optimization.
-\end{itemize}
+{
+  I worked on a system that captures and analyzes HTTP traffic coming through a high-speed network interface in real time.
+  My most notable contribution was designing a high-performance blob archive.
 }
 
 \cventry{2011--2012}
-{Software Engineer, Architect}
+{Software Engineer}
 {Exigen Services}
 {Nizhny Novgorod}
 {}
-{I worked on a project for
-\href{http://www.aaa.com/PPInternational/International.html}{AAA}
-based on
-\href{http://www.exigeninsurance.com/business-solutions/overview.html}{Exigen Insurance Solutions}.
-The project was successfully deployed and transferred to support team.
-\newline{}
-Achievements:
-\begin{itemize}
-\item Led free Java and JavaScript courses for employees and external
-  visitors.
-\item Wrote a Maven2 plugin that significantly simplified work for
-  translators.
-\item Got ''Best Newcomer of the Year (2011)'' award.
-\end{itemize}
+{
+  I worked on systems for car insurance policy automation for \href{https://aaa.com}{AAA}.
+  I also led free Java and JavaScript courses for employees and external visitors.
 }
 
 \cventry{2010--2011}
@@ -122,24 +97,15 @@ Achievements:
 {IT Corp.}
 {Nizhny Novgorod}
 {}
-{I worked on several projects for banks and public institutions. I
-  also did various investigations, and prototypes.}
+{ I worked on several projects for banks and public institutions. }
 
 \cventry{2009--2010}
 {Software Developer}
 {Mera NN}
 {Nizhny Novgorod}
 {}
-{I worked in a support team and made bugfixes and improvements in two
-  projects:
-\begin{itemize}
-\item Adaptation of SS7 stack for Ericsson CPP platform (September
-  2009--November 2010).  The system is mostly written in ANSI C and
-  running on OSE Delta real-time OS.
-\item Element Manager for Nortel ICP product (March 2009--September
-  2009).  The product is based on Java 5 and J2EE and runs on JBoss
-  4.2.
-\end{itemize}
+{
+  I worked on an implementation of the SS7 stack in a real-time OS for the Ericsson CPP Platform.
 }
 
 %------------------------------------------------------------
@@ -158,6 +124,7 @@ Achievements:
 %------------------------------------------------------------
 \section{Languages}
 \cvlanguage{English}{Fluent}{}
+\cvlanguage{German}{Intermediate}{}
 \cvlanguage{Russian}{Native}{}
 
 %------------------------------------------------------------
@@ -165,15 +132,6 @@ Achievements:
 %------------------------------------------------------------
 \section{Profiles}
 \cvitemwithcomment{GitHub}{\url{https://github.com/roman-kashitsyn}}{}
-\cvitemwithcomment{Shelfari}{\url{http://www.shelfari.com/lifted}}{}
-\cvitemwithcomment{LinkedIn}{\url{https://www.linkedin.com/profile/view?id=193829212}}{}
-
-%------------------------------------------------------------
-% Interests
-%------------------------------------------------------------
-\section{Interests}
-\cvlistdoubleitem{Software Architecture}{API Design}
-\cvlistdoubleitem{Functional Programming}{Physics}
-\cvlistdoubleitem{Build Systems}{Math}
+\cvitemwithcomment{LinkedIn}{\url{https://www.linkedin.com/in/roman-kashitsyn/}}{}
 
 \end{document}
